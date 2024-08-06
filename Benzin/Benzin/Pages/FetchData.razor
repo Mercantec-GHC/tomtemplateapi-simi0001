@@ -1,4 +1,5 @@
 ﻿@page "/fetchdata"
+@inject IHttpClientFactory ClientFactory
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -9,29 +10,29 @@
 
 <p>This component demonstrates fetching data from a service.</p>
 
-@if (forecasts == null)
+@if (data == null)
 {
-    <p><em>Loading...</em></p>
+    <p>Loading...</p>
+}
+else if (data.Count == 0)
+{
+    <p>No data available.</p>
 }
 else
 {
     <table class="table">
         <thead>
             <tr>
+                <th>Price</th>
                 <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var item in data)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@item.Price</td>
+                    <td>@item.Date</td>
                 </tr>
             }
         </tbody>
@@ -41,8 +42,25 @@ else
 @code {
     private WeatherForecast[]? forecasts;
 
+    private List<PriceDate>? data;
+
+
     protected override async Task OnInitializedAsync()
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        var request = new HttpRequestMessage(HttpMethod.Get, "https://magsapi.onrender.com/api/miles95");
+        var client = ClientFactory.CreateClient();
+
+        var response = await client.SendAsync(request);
+        if (response.IsSuccessStatusCode)
+        {
+            data = await response.Content.ReadFromJsonAsync<List<PriceDate>>();
+        }
     }
+    public class PriceDate
+    {
+        public string Price { get; set; }
+        public string Date { get; set; }
+    }
+
 }

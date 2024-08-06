@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sila1400\\source\\repos\\Benzin\\Benzin\\Benzin.csproj": {}
+    "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sila1400\\source\\repos\\Benzin\\Benzin\\Benzin.csproj": {
+    "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sila1400\\source\\repos\\Benzin\\Benzin\\Benzin.csproj",
+        "projectUniqueName": "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj",
         "projectName": "Benzin",
-        "projectPath": "C:\\Users\\sila1400\\source\\repos\\Benzin\\Benzin\\Benzin.csproj",
+        "projectPath": "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj",
         "packagesPath": "C:\\Users\\sila1400\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sila1400\\source\\repos\\Benzin\\Benzin\\obj\\",
+        "outputPath": "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sila1400\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
