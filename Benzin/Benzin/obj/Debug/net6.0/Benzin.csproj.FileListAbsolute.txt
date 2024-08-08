@@ -63,3 +63,13 @@ C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\obj\Deb
 C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\obj\Debug\net6.0\Benzin.csproj.AssemblyReference.cache
 C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\obj\Debug\net6.0\Benzin.csproj.CopyComplete
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Blazor-ApexCharts.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\Microsoft.JSInterop.dll
+C:\Users\sila1400\Documents\GitHub\tomtemplateapi-simi0001\Benzin\Benzin\bin\Debug\net6.0\System.IO.Pipelines.dll

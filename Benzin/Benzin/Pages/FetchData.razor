@@ -1,5 +1,6 @@
 ﻿@page "/fetchdata"
-@inject IHttpClientFactory ClientFactory
+@inject HttpClient client
+
 
 <PageTitle>Weather forecast</PageTitle>
 
@@ -20,6 +21,21 @@ else if (data.Count == 0)
 }
 else
 {
+    <ApexChart TItem="PriceDate"
+               Title="Order Net Value"
+               XAxisType="XAxisType.Datetime">
+
+
+        <ApexPointSeries TItem="PriceDate"
+                         Items="data"
+                         Name="Gross Value"
+                         SeriesType="SeriesType.Line"
+                         XValue="@(e => e.Date)"
+                         YValue="@(e => e.Price)"
+                        />
+
+       
+    </ApexChart>
     <table class="table">
         <thead>
             <tr>
@@ -48,19 +64,13 @@ else
     protected override async Task OnInitializedAsync()
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-        var request = new HttpRequestMessage(HttpMethod.Get, "https://magsapi.onrender.com/api/miles95");
-        var client = ClientFactory.CreateClient();
-
-        var response = await client.SendAsync(request);
-        if (response.IsSuccessStatusCode)
-        {
-            data = await response.Content.ReadFromJsonAsync<List<PriceDate>>();
-        }
+        data = await client.GetFromJsonAsync<List<PriceDate>>("https://magsapi.onrender.com/api/miles95");
+        
     }
     public class PriceDate
     {
-        public string Price { get; set; }
-        public string Date { get; set; }
+        public decimal Price { get; set; }
+        public DateTime Date { get; set; }
     }
 
 }

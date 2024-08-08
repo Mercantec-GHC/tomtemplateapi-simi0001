@@ -2,17 +2,61 @@
 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
+@inject HttpClient client
 
-<p role="status">Current count: @currentCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<PageTitle>Weather forecast</PageTitle>
+
+@using Benzin.Data
+@inject WeatherForecastService ForecastService
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (data == null)
+{
+    <p>Loading...</p>
+}
+else if (data.Count == 0)
+{
+    <p>No data available.</p>
+}
+else
+{
+   
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in data)
+            {
+                <tr>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
 @code {
-    private int currentCount = 0;
+    private WeatherForecast[]? forecasts;
 
-    private void IncrementCount()
+    private List<Car>? data;
+
+
+    protected override async Task OnInitializedAsync()
     {
-        currentCount++;
+        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        data = await client.GetFromJsonAsync<List<Car>>("https://magsapi.onrender.com/api/bilbasen");
+
     }
+    public class Car
+    {
+    }
+
 }
