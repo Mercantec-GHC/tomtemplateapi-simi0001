@@ -24,7 +24,20 @@ else if (data.Count == 0)
 }
 else
 {
-   
+    <ApexChart TItem="PriceDate"
+               Title="Order Net Value"
+               XAxisType="XAxisType.Datetime">
+
+
+        <ApexPointSeries TItem="PriceDate"
+                         Items="data"
+                         Name="Gross Value"
+                         SeriesType="SeriesType.Line"
+                         XValue="@(e => e.Date)"
+                         YValue="@(e => e.Price)" />
+
+
+    </ApexChart>
     <table class="table">
         <thead>
             <tr>
@@ -36,7 +49,8 @@ else
             @foreach (var item in data)
             {
                 <tr>
-                    
+                    <td>@item.Price</td>
+                    <td>@item.Date</td>
                 </tr>
             }
         </tbody>
@@ -46,17 +60,19 @@ else
 @code {
     private WeatherForecast[]? forecasts;
 
-    private List<Car>? data;
+    private List<PriceDate>? data;
 
 
     protected override async Task OnInitializedAsync()
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
-        data = await client.GetFromJsonAsync<List<Car>>("https://magsapi.onrender.com/api/bilbasen");
+        data = await client.GetFromJsonAsync<List<PriceDate>>("https://magsapi.onrender.com/api/miles95");
 
     }
-    public class Car
+    public class PriceDate
     {
+        public decimal Price { get; set; }
+        public DateTime Date { get; set; }
     }
 
 }

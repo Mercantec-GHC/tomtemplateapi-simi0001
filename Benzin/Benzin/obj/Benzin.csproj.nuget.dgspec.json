@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj": {}
+    "C:\\Users\\Silas\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj": {
+    "C:\\Users\\Silas\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj",
+        "projectUniqueName": "C:\\Users\\Silas\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj",
         "projectName": "Benzin",
-        "projectPath": "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj",
-        "packagesPath": "C:\\Users\\sila1400\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sila1400\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\obj\\",
+        "projectPath": "C:\\Users\\Silas\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\Benzin.csproj",
+        "packagesPath": "C:\\Users\\Silas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Silas\\Documents\\GitHub\\tomtemplateapi-simi0001\\Benzin\\Benzin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sila1400\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Silas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
